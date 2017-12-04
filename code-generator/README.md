@@ -1,2 +1,3 @@
-# jubilant-enigma
-Random mini projects
+# Code Generator
+
+Generates random codes based on alphanumeric options.
