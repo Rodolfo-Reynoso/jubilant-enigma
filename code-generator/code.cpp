@@ -44,7 +44,7 @@ int main(int argc, char const *argv[]) {
             
             code = getCode(codeChoices, lengthOfCode);
 
-            if (checkSubString(code, 'b', 'c', 'd')) {
+            if (checkSubString(code, 'w', 't', 'f') || checkSubString(code, 'k', 'm', 's') ) {
 
 	            myfile << code << endl;
 
