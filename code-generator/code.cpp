@@ -30,9 +30,9 @@ int main(int argc, char const *argv[]) {
     ifstream codeReader ("sample.txt");
 
     int lengthOfCode = 0;
-    char codeChoices[29] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', 
-                             'a' , 'b' , 'c', 'd', 'f', 'g', 'h', 'j', 'k',
-                             'l', 'm', 'n', 'p', 'q', 'r', 's', 't' ,'v', 'w', 'x' };
+    char codeChoices[27] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+                             'b' , 'c', 'd', 'f', 'g', 'h', 'j', 'k',
+                             'm', 'n', 'p', 'q', 'r', 's', 't' ,'v', 'w', 'x' };
 
 
     cout << "What length should the code be?: " ;
