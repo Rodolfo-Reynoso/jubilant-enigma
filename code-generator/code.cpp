@@ -66,7 +66,7 @@ string getCode(char codeChoices[], int lengthOfCode) {
 
     for (int i = 0; i < lengthOfCode; i++) {
         
-        code += codeChoices[rand() % 29];
+        code += codeChoices[rand() % 27];
     }
     return code;
 }
