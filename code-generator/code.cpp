@@ -26,8 +26,8 @@ int main(int argc, char const *argv[]) {
 
     string code;
 
-    ofstream myfile ("sample.txt");
-    ifstream codeReader ("sample.txt");
+    ofstream myfile ("sample.csv");
+    ifstream codeReader ("sample.csv");
 
     int lengthOfCode = 0;
     char codeChoices[27] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', 
