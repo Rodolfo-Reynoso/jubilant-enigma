@@ -10,11 +10,10 @@ Purpose: This program will generate random codes based on consonants and numbers
 #include <cstdlib>
 #include <fstream>
 
-using namespace std;
 
-string getCode(char codeChoices[], int lengthOfCode);
+std::string getCode(char codeChoices[], int lengthOfCode);
 
-bool checkSubString(string code, char first, char second, char third);
+bool checkSubString(std::string code, char first, char second, char third);
 
 //Pre: Takes in the string length as an integer
 //Returns random code
@@ -24,19 +23,19 @@ int main(int argc, char const *argv[]) {
     
     srand(time(NULL));
 
-    string code;
+    std::string code;
 
-    ofstream myfile ("sample.csv");
-    ifstream codeReader ("sample.csv");
+    std::ofstream myfile ("sample.csv");
+    std::ifstream codeReader ("sample.csv");
 
     int lengthOfCode = 0;
     char codeChoices[27] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', 
-                             'b' , 'c', 'd', 'f', 'g', 'h', 'j', 'k',
-                             'm', 'n', 'p', 'q', 'r', 's', 't' ,'v', 'w', 'x' };
+                             'b' , 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'm',
+                              'n', 'p', 'q', 'r', 's', 't' ,'v', 'w', 'x' };
 
 
-    cout << "What length should the code be?: " ;
-    cin  >> lengthOfCode;
+    std::cout << "What length should the code be?: " ;
+    std::cin  >> lengthOfCode;
 
 
     if (myfile.is_open()) {
@@ -44,9 +43,9 @@ int main(int argc, char const *argv[]) {
             
             code = getCode(codeChoices, lengthOfCode);
 
-            if (checkSubString(code, 'w', 't', 'f') || checkSubString(code, 'k', 'm', 's') ) {
+            if ( checkSubString(code, 'w', 't', 'f') || checkSubString(code, 'k', 'm', 's') ) {
 
-	            myfile << code << endl;
+	            myfile << code << std::endl;
 
             } else {    
 
@@ -60,9 +59,9 @@ int main(int argc, char const *argv[]) {
 }   
 
 
-string getCode(char codeChoices[], int lengthOfCode) {
+std::string getCode(char codeChoices[], int lengthOfCode) {
 
-    string code = "";
+    std::string code = "";
 
     for (int i = 0; i < lengthOfCode; i++) {
         
@@ -71,7 +70,7 @@ string getCode(char codeChoices[], int lengthOfCode) {
     return code;
 }
 
-bool checkSubString(string code, char first, char second, char third) {
+bool checkSubString(std::string code, char first, char second, char third) {
 
     bool checkValue = true;
 
