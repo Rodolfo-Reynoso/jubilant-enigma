@@ -41,16 +41,14 @@ int main(int argc, char const *argv[]) {
     if (myfile.is_open()) {
         for (int i = 1; i <= 20000000; i++) {  //20 million
             
-            code = getCode(codeChoices, lengthOfCode);
+            do {
+               
+                code = getCode(codeChoices, lengthOfCode);
 
-            if ( checkSubString(code, 'w', 't', 'f') || checkSubString(code, 'k', 'm', 's') ) {
+            } 
+            while ( checkSubString(code, 'w', 't', 'f') || checkSubString(code, 'k', 'm', 's') );
 
-	            myfile << code << std::endl;
-
-            } else {    
-
-                i--;
-            }
+            myfile << code << std::endl;[]
         }
     }
 
@@ -72,13 +70,13 @@ std::string getCode(char codeChoices[], int lengthOfCode) {
 
 bool checkSubString(std::string code, char first, char second, char third) {
 
-    bool checkValue = true;
+    bool checkValue = false;
 
     for (int i = 0; i < code.length(); i++) {
 
         if ( (first == code[i]) && (second == code[i+1]) && (third == code[i+2])  ) {
 
-            checkValue = false;
+            checkValue = true;
             break;
         }
     }
