@@ -48,7 +48,7 @@ int main(int argc, char const *argv[]) {
             } 
             while ( checkSubString(code, 'w', 't', 'f') || checkSubString(code, 'k', 'm', 's') );
 
-            myfile << code << std::endl;[]
+            myfile << code << std::endl;
         }
     }
 
