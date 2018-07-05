@@ -39,7 +39,7 @@ int main(int argc, char const *argv[]) {
 
 
     if (myfile.is_open()) {
-        for (int i = 1; i <= 20000000; i++) {  //20 million
+        for (int i = 1; i <= 150; i++) { //150 codes
             
             do {
                
