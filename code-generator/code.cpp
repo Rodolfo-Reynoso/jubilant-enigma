@@ -30,8 +30,8 @@ int main(int argc, char const *argv[]) {
 
     int lengthOfCode = 0;
     char codeChoices[27] = { '1', '2', '3', '4', '5', '6', '7', '8', '9', 
-                             'b' , 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'm',
-                              'n', 'p', 'q', 'r', 's', 't' ,'v', 'w', 'x' };
+                             'B' , 'C', 'D', 'F', 'G', 'H', 'J', 'K', 'M',
+                              'N', 'P', 'Q', 'R', 'S', 'T' ,'V', 'W', 'X' };
 
 
     std::cout << "What length should the code be?: " ;
